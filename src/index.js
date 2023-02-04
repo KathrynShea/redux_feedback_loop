@@ -22,6 +22,8 @@ const feedbackReducer = (state = {}, action) => {
     return state;
 };
 
+
+
 //store
 const store = createStore(feedbackReducer);
 

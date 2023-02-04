@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import { HashRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route, useHistory } from "react-router-dom";
 
 import Feeling from '../Questions/Feeling';
 import Understanding from '../Questions/Understanding';
@@ -11,6 +11,12 @@ import Review from '../Review/Review';
 import Success from '../Review/Success';
 
 function App() {
+  let history = useHistory();
+
+  const handleClick = () => {
+    console.log("you clicked!");
+    history.pushState("feeling");
+  }
 
   return (
     <Router>
@@ -19,6 +25,7 @@ function App() {
         <h1 className='App-title'>Feedback!</h1>
         <h4>Don't forget it!</h4>
       </header>
+      
       <Route path="/feeling">
           <Feeling />
       </Route>
@@ -34,8 +41,11 @@ function App() {
       <Route path="/review">
           <Review />
       </Route>
-      <Route path="/success">
+      <Route path="/sucess">
           <Success />
+      </Route>
+      <Route path="/" exact>
+        <button onClick={handleClick}>Begin Feedback</button>
       </Route>
     </div>
     </Router>

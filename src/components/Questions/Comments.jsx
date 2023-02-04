@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 
 function Comments (){
-    const [comments, setComments] = useState();
+    const [comments, setComments] = useState("");
 
     const dispatch = useDispatch();
     const history = useHistory();
@@ -26,7 +26,9 @@ function Comments (){
           value={comments}
           onChange={(e) => setComments(e.target.value)}
           />
+        <button onClick={() => history.push('/support')}>Back</button>
         <button onClick={handleSubmit}>Next</button>
+        
         </section>
         </>);
 }
