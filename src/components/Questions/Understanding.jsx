@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Understanding (){
     const [understanding, setUnderstanding] = useState();
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleSubmit = () => {
         //console.log("you are in handle submit!", understanding);
@@ -12,6 +14,7 @@ function Understanding (){
         let action = {type: "ADD_UNDERSTANDING", payload: understanding};
         dispatch(action);
 
+        history.push('/support');
     }
 
     return(

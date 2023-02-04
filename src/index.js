@@ -16,6 +16,8 @@ const feedbackReducer = (state = {}, action) => {
         return {...state, support: action.payload};
     } else if (action.type === "ADD_COMMENTS"){
         return {...state, comments: action.payload};
+    } else if (action.type === "CLEAR"){
+        return {};
     }
     return state;
 };

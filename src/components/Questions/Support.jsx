@@ -1,16 +1,19 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 
 function Support() {
     const [support, setSupport] = useState();
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
     const handleSubmit = () => {
         //console.log("you are in handle submit!", support);
 
         let action = {type: "ADD_SUPPORT", payload: support};
         dispatch(action);
+        history.push('/comments');
 
     }
   return (
