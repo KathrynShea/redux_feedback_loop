@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
+import './bootstrap.css'
 import { HashRouter as Router, Route, useHistory } from "react-router-dom";
 
 import Feeling from '../Questions/Feeling';

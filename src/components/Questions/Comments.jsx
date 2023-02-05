@@ -20,14 +20,14 @@ function Comments (){
     <>
         <section>
         <h3>Any comments you want to leave?</h3>
-        <input
+        <input class="form-control form-control-sm"
           id="comments"
           name="comments"
           value={comments}
           onChange={(e) => setComments(e.target.value)}
           />
-        <button onClick={() => history.push('/support')}>Back</button>
-        <button onClick={handleSubmit}>Next</button>
+        <button type="button" class="btn btn-light" onClick={() => history.push('/support')}>Back</button>
+        <button type="button" class="btn btn-primary" onClick={handleSubmit}>Next</button>
         
         </section>
         </>);

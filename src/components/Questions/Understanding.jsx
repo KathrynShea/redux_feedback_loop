@@ -26,7 +26,7 @@ function Understanding (){
   
         <section>
         <h3>How well are you understanding the content?*</h3>
-        <select id="understanding" name="understanding" value={understanding} onChange={e =>setUnderstanding(e.target.value)}>
+        <select class="form-control form-control-sm" id="understanding" name="understanding" value={understanding} onChange={e =>setUnderstanding(e.target.value)}>
                 <option value="0">---please select---</option>
                 <option value="1">1 (Not well)</option>
                 <option value="2">2</option>
@@ -35,8 +35,8 @@ function Understanding (){
                 <option value="5">5</option>
                 <option value="6">6 (Very well)</option>
             </select>
-        <button onClick={() => history.push('/feeling')}>Back</button>
-        <button onClick={handleSubmit}>Next</button>
+        <button type="button" class="btn btn-light" onClick={() => history.push('/feeling')}>Back</button>
+        <button type="button" class="btn btn-primary" onClick={handleSubmit}>Next</button>
         
 
         </section>

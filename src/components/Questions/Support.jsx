@@ -25,7 +25,7 @@ function Support() {
 
       <section>
         <h3>How well are you being supported?*</h3>
-        <select
+        <select class="form-control form-control-sm"
           id="support"
           name="support"
           value={support}
@@ -39,8 +39,8 @@ function Support() {
           <option value="5">5</option>
           <option value="6">6 (Very well)</option>
         </select>
-        <button onClick={() => history.push('/understanding')}>Back</button>
-        <button onClick={handleSubmit}>Next</button>
+        <button type="button" class="btn btn-light" onClick={() => history.push('/understanding')}>Back</button>
+        <button type="button" class="btn btn-primary" onClick={handleSubmit}>Next</button>
         
       </section>
     </>

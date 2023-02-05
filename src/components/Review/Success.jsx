@@ -19,7 +19,7 @@ function Success (){
     return (
     <>
     <h1>Success</h1>
-    <button onClick={handleClick}>Submit another feedback survey</button>
+    <button type="button" class="btn btn-primary" onClick={handleClick}>Submit another feedback survey</button>
     </>
     );
 }

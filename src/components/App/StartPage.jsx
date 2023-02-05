@@ -8,7 +8,7 @@ function StartPage(){
       history.push("/feeling");
     }
     return (
-        <button onClick={handleClick}>Begin Feedback</button>
+        <button type="button" class="btn btn-primary" onClick={handleClick}>Begin Feedback</button>
     )
 
 }

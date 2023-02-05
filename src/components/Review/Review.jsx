@@ -32,8 +32,8 @@ function Review (){
     <h4>Understanding: {understanding}</h4>
     <h4>Support: {support}</h4>
     <h4>Comments: {comments}</h4>
-    <button onClick={ () => history.push('/comments')}>Back</button>
-    <button onClick={handleSubmit}>Submit</button>
+    <button type="button" class="btn btn-light" onClick={ () => history.push('/comments')}>Back</button>
+    <button type="button" class="btn btn-primary" onClick={handleSubmit}>Submit</button>
     
     </>);
 }

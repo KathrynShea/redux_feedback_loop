@@ -32,7 +32,7 @@ function Feeling (){
         <section>
             <h3>How are you feeling today?*</h3>
     
-            <select id="feeling" name="feeling" value={feeling} onChange={e =>setFeeling(e.target.value)}>
+            <select class="form-control form-control-sm" id="feeling" name="feeling" value={feeling} onChange={e =>setFeeling(e.target.value)}>
                 <option value="">---please select---</option>
                 <option value="1">1 (feeling very bad)</option>
                 <option value="2">2</option>
@@ -41,7 +41,7 @@ function Feeling (){
                 <option value="5">5</option>
                 <option value="6">6 (feeling great!)</option>
             </select>
-        <button onClick={handleSubmit}>Next</button>
+        <button type="button" class="btn btn-primary" onClick={handleSubmit}>Next</button>
         </section>
     </>);
 }
