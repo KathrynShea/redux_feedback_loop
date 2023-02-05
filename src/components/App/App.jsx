@@ -9,14 +9,10 @@ import Support from '../Questions/Support';
 import Comments from '../Questions/Comments';
 import Review from '../Review/Review';
 import Success from '../Review/Success';
+import StartPage from './StartPage';
 
 function App() {
-  let history = useHistory();
 
-  const handleClick = () => {
-    console.log("you clicked!");
-    history.pushState("feeling");
-  }
 
   return (
     <Router>
@@ -41,11 +37,11 @@ function App() {
       <Route path="/review">
           <Review />
       </Route>
-      <Route path="/sucess">
+      <Route path="/success">
           <Success />
       </Route>
       <Route path="/" exact>
-        <button onClick={handleClick}>Begin Feedback</button>
+        <StartPage />
       </Route>
     </div>
     </Router>

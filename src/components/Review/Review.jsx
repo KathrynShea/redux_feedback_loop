@@ -23,7 +23,6 @@ function Review (){
             console.log("error in posting feedback");
         });
         
-        history.push('/success');
 
     }
 
