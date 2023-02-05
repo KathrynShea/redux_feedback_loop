@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import swal from 'sweetalert';
 
 function Understanding (){
     const [understanding, setUnderstanding] = useState("");
@@ -11,7 +12,7 @@ function Understanding (){
     const handleSubmit = () => {
         //console.log("you are in handle submit!", understanding);
         if (understanding === "") {
-            alert("Please make a selection");
+            swal("Please make a selection", "","warning");
         } else {
             console.log("this is understanding", understanding);
         let action = {type: "ADD_UNDERSTANDING", payload: understanding};

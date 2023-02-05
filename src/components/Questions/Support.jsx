@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import swal from 'sweetalert';
 
 function Support() {
     const [support, setSupport] = useState("");
@@ -12,7 +13,7 @@ function Support() {
         //console.log("you are in handle submit!", support);
 
         if (support === "") {
-          alert("Please make a selection");
+          swal("Please make a selection", "","warning");
       } else {
 
         let action = {type: "ADD_SUPPORT", payload: support};

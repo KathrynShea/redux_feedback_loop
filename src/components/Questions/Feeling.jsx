@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
+import swal from 'sweetalert';
+
 
 
 
@@ -14,7 +16,8 @@ function Feeling (){
     const handleSubmit = () => {
         //console.log("you are in handle submit!", feeling);
         if (feeling === "") {
-            alert("Please make a selection");
+            swal("Please make a selection", "","warning");
+        
         } else {
             console.log("this is feeling", feeling);
 
@@ -41,6 +44,7 @@ function Feeling (){
                 <option value="5">5</option>
                 <option value="6">6 (feeling great!)</option>
             </select>
+            
         <button type="button" class="btn btn-primary" onClick={handleSubmit}>Next</button>
         </section>
     </>);

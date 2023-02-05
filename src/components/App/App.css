@@ -1,10 +1,28 @@
 .App {
   text-align: center;
+  border: 2px solid black;
+  margin: 10%;
+  padding: 5%;
+  box-shadow: 5px 5px 5px black;
 }
 
 .App-header {
   min-height: 70px;
   padding: 20px;
   margin-bottom: 20px;
+  color: rgb(253, 246, 227);
+}
+
+.swal-overlay {
+  background-color: #6d5200;
+}
+
+.swal-button {
+  padding: 7px 19px;
+  border-radius: 2px;
+  background-color: #002b36;
+  font-size: 12px;
+  border: 1px solid #002b36;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
 }
 
